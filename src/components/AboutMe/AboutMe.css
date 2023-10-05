@@ -1,0 +1,133 @@
+.aboutme {
+    padding: 70px 18px 70px;
+}
+
+.aboutme__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme__title {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    margin: 0;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 28px;
+}
+
+.aboutme__image {
+    border-radius: 10px;
+    padding: 60px 0 0;
+    object-fit: cover;
+    width: 288px;
+    height: 352px;
+}
+
+.aboutme__text-container {
+    margin: 40px auto 0;
+}
+
+.aboutme__name {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.31px;
+    margin: 0;
+}
+
+.aboutme__description {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 20px 0 0;
+    margin: 0;
+}
+
+.aboutme__signature {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 20px 0 40px;
+}
+
+.aboutme__link {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-decoration: none;
+}
+
+.aboutme__link:hover {
+    opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+    .aboutme {
+        padding: 95px 50px 90px;
+    }
+
+    .aboutme__title {
+        font-size: 22px;
+        padding-bottom: 26px;
+    }
+
+    .aboutme__image {
+        padding: 0;
+        width: 255px;
+        height: 307px;
+    }
+
+    .aboutme__info {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        column-gap: 50px;
+        padding: 66px 0 0;
+    }
+
+    .aboutme__name {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    .aboutme__text-container {
+        margin: 0;
+    }
+    .aboutme__signature {
+        font-size: 12px;
+        margin: 20px 0 86px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .aboutme {
+        padding: 114px 70px 100px;
+    }
+    .aboutme__image {
+        width: 270px;
+        height: 309px;
+    }
+    .aboutme__info {
+        padding: 75px 0 0;
+        justify-content: space-between;
+    }
+    .aboutme__name {
+        font-size: 50px;
+    }
+
+    .aboutme__description {
+        font-size: 18px;
+        padding: 32px 0 0 ;
+    }
+
+    .aboutme__signature {
+        letter-spacing: 0px;
+        font-size: 14px;
+        margin: 29px 0 100px;
+        width: 599px;
+        line-height: 21px;
+    }
+}
