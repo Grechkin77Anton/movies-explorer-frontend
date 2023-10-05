@@ -1,0 +1,126 @@
+.movie__gallery {
+    margin: 0 10px;
+}
+
+.movie__search {
+    margin: 84px 5px 17px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 10px;
+}
+
+.input__search_movie {
+    border: none;
+    width: 70%;
+}
+
+.movie__list {
+    display: flex;
+    margin: 87px 0 0;
+    flex-direction: column;
+    row-gap: 34px;
+}
+
+.button__add-more {
+    display: block;
+    margin: 58px auto 80px;
+    background: #F9F9F9;
+    height: 36px;
+    width: 75%;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.5px;
+    cursor: pointer;
+}
+
+.button__search {
+    background-color: #3456F3;
+    color: #FFF;
+    width: 58.65px;
+    height: 34px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 18px;
+    border: none;
+    border-radius: 15px;
+}
+.button__search:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search__error {
+    color: #FF004C;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 13px;
+    visibility: hidden;
+}
+
+.search__error_active {
+    visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+
+    .movie__gallery {
+        margin: 0 30px;
+    }
+
+    .movie__search {
+        margin: 84px 0 17px;
+    }
+
+    .search__container {
+        padding: 0 0 55px;
+    }
+
+    .input__search_movie {
+        font-size: 24px;
+    }
+
+    .movie__list {
+        margin: 70px 0 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 339px);
+        column-gap: 30px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    .button__add-more {
+        width: 320px; 
+        margin: 65px auto 80px;
+    }
+    .search__error {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .movie__gallery {
+        margin: 0 70px;
+    }
+
+    .movie__search {
+        margin: 72px 0px 20px;
+    }
+
+    .movie__list {
+        margin: 60px 0 0;
+        grid-template-columns: repeat(auto-fit, 270px);
+        gap: 38px 20px;
+    }
+}
