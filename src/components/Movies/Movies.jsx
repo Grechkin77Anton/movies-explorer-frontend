@@ -19,34 +19,38 @@ export default function Movies() {
       }
 
     return (
-        <section className='movie__gallery'>
-            <div className='search__container'>
-                <form noValidate className='movie__search' value={values.search} onSubmit={onSubmit}>
-                    <input className='input__search_movie' type='text' placeholder='Фильм' onChange={handleChange} required  />
-                    <button className='button__search' >Найти</button>
-                </form>
-                <span className={`search__error ${isError ? 'search__error_active': ''}`}>Введите название фильма</span>
-                <FilterCheckbox></FilterCheckbox>
-                </div>
-            <section className='movie__list'>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                <MoviesCard></MoviesCard>
-                </section>
-                <button type='button' className='button__add-more'>Ещё</button>
-        </section>
+      <main className='movie-gallery__page'>
+          <section className='movie__gallery'>
+              <div className='search__container'>
+                  <form noValidate className='movie__search-container' value={values.search} onSubmit={onSubmit}>
+                    <div className='search__movie'>
+                      <input className='input__search_movie' type='text' placeholder='Фильм' onChange={handleChange} required  />
+                      <button type='submit' className='button__search' >Найти</button>
+                    </div>
+                      <span className={`search__error ${isError ? 'search__error_active': ''}`}>Введите название фильма</span>
+                      <FilterCheckbox></FilterCheckbox>
+                  </form>
+                  </div>
+              <ul className='movie__list'>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  <MoviesCard></MoviesCard>
+                  </ul>
+                  <button type='button' className='button__add-more'>Ещё</button>
+          </section>
+      </main>
     )
 }

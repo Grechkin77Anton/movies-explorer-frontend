@@ -30,44 +30,48 @@ export default function Login ({ setLoggedIn }) {
       }
 
     return (
-        <div className="login">
-            <div>
-              <Link to={'/'} className="login__link-home"></Link>
-            </div>
-            <h2 className="login__title">Рады видеть!</h2>
-            <form className="login__form" 
-            name="signin"
-            onSubmit={handleLogin}
-            >
-                <label className="login__label">
-                    <span className="login__subtitle">Email</span>
-                    <input 
-                    className="login__input_email" 
-                    type="email"
-                    value={email}
-                    onChange={({target}) => setEmail(target.value)}
-                    required
-                    >
-                    </input>
-                    <span className="login__error"></span>
-                </label>
+        <main className="login__page">
+            <div className="login">
+                <div>
+                <Link to={'/'} className="login__link-home"></Link>
+                </div>
+                <h1 className="login__title">Рады видеть!</h1>
+                <form className="login__form" 
+                name="signin"
+                onSubmit={handleLogin}
+                >
+                    <label className="login__label">
+                        <span className="login__subtitle">Email</span>
+                        <input 
+                        className="login__input_email"
+                        placeholder='Email@mail.com'
+                        type="email"
+                        value={email}
+                        onChange={({target}) => setEmail(target.value)}
+                        required
+                        >
+                        </input>
+                        <span className="login__error"></span>
+                    </label>
 
-                <label className="login__label">
-                    <span className="login__subtitle">Пароль</span>
-                    <input 
-                    className="login__input_password" 
-                    type="password"
-                    value={password}
-                    onChange={({target}) => setPassword(target.value)}
-                    required
-                    >  
-                    </input>
-                    <span className="login__error">Что-то пошло не так</span>
-                </label>
-                <span className="login__error-request">Ошибка при входе</span>
-                <button type="submit" className="login__submit">Войти</button>
-            </form>
-            <p className="login__text">Ещё не зарегистрированы? <Link to='/signup' className='login__link'>Регистрация</Link></p>
-        </div>
+                    <label className="login__label">
+                        <span className="login__subtitle">Пароль</span>
+                        <input 
+                        className="login__input_password" 
+                        placeholder='Пароль'
+                        type="password"
+                        value={password}
+                        onChange={({target}) => setPassword(target.value)}
+                        required
+                        >  
+                        </input>
+                        <span className="login__error">Что-то пошло не так</span>
+                    </label>
+                    <span className="login__error-request">Ошибка при входе</span>
+                    <button type="submit" className="login__submit">Войти</button>
+                </form>
+                <p className="login__text">Ещё не зарегистрированы? <Link to='/signup' className='login__link'>Регистрация</Link></p>
+            </div>
+        </main>
     )
 }

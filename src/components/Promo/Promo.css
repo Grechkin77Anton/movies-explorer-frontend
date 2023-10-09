@@ -66,8 +66,9 @@
     }
     .promo__title {
         font-size: 40px;
-        width: 524px;
+        width: 565px;
         line-height: 50px;
+        letter-spacing: 0.2px;
     }
 
     .promo__subtitle {

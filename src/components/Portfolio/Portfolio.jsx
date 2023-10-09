@@ -4,7 +4,7 @@ import './Portfolio.css';
 export default function Portfolio() {
     return(
         <section className='portfolio'>
-            <div className='portfolio__title'>Портфолио</div>
+            <h2 className='portfolio__title'>Портфолио</h2>
             <nav className='portfolio__nav'>
             <ul className='portfolio__lists'>
                 <li className='portfolio__list'>

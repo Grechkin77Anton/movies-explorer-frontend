@@ -23,19 +23,22 @@
     padding-bottom: 10px;
 }
 
-.profile__input_name{
+.profile__input_name {
     width: 65%;
     border: none;
     text-align: right;
     font-size: 11px;
+    outline: none;
 }
 
-.profile__input_email{
+.profile__input_email {
     width: 65%;
     border: none;
     text-align: right;
     font-size: 11px;
+    outline: none;
 }
+
 .profile__error {
     display: block;
     font-size: 10px;
@@ -68,6 +71,11 @@
     letter-spacing: -0.5px;
 }
 
+.profile__submit:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .profile__logout {
     text-decoration: none;
     color: #FF004D;
@@ -78,6 +86,10 @@
     text-align: center;
     margin: 16px auto 40px;
     letter-spacing: -0.5px;
+}
+
+.profile__logout:hover {
+    opacity: 0.7;
 }
 
 @media screen and (min-width: 768px) {
