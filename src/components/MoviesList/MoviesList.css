@@ -22,17 +22,17 @@
     outline: none;
 }
 
-/* .input__search_movie:focus {
-    border-bottom: 1px solid #3456F3;
-} */
-
-
 .movie__list {
     display: flex;
     margin: 87px 0 0;
     flex-direction: column;
     row-gap: 34px;
     padding: 0;
+}
+
+.movie__list_search-error {
+    text-align: center;
+    margin-bottom: 110px;
 }
 
 .button__add-more {
@@ -47,6 +47,10 @@
     font-weight: 500;
     line-height: 14.5px;
     cursor: pointer;
+}
+
+.button__add-more_hidden {
+    display: none;
 }
 
 .button__add-more:hover {

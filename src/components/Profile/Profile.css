@@ -56,6 +56,12 @@
     line-height: 13.31px;
     margin-top: 317px;  
     text-align: center;
+    min-height: 5px;
+}
+
+.profile__error-request_success {
+    color: #C2C2C2;
+    ;
 }
 
 .profile__submit {
@@ -69,6 +75,16 @@
     line-height: 15.73px;
     color: #000;
     letter-spacing: -0.5px;
+    pointer-events: none;
+}
+
+.profile__submit_active {
+    background-color: #3456F3;
+    height: 45px;
+    width: 410px;
+    color: #FFF;
+    pointer-events: visible;
+    transition: .2s linear;
 }
 
 .profile__submit:hover {

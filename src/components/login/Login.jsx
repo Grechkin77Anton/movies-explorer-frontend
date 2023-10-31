@@ -1,33 +1,19 @@
-
-import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Login.css';
 import { Link } from "react-router-dom";
+import useFormValidation from "../../utils/useFormValidation";
 
-export default function Login ({ setLoggedIn }) {
+export default function Login ({ onLogin, setIsError, isError, isSend }) {
+    const { values, errors, isValid, handleChange } = useFormValidation()
 
-    const navigate = useNavigate(); 
+    useEffect(() => {
+        setIsError(false)
+    }, [setIsError])
 
-    const[password, setPassword] = useState('');
-    const[email, setEmail] = useState('');
-
-    // const handleLogin = (evt) => {
-    //     evt.preventDefault()
-    //     onLogin({password, email})
-    //       .then(() => {
-    //         setPassword('');
-    //         setEmail('');
-    //       })
-    //       .then(() => navigate('/'))
-    //       .catch(console.error)
-    // }
-
-
-    function handleLogin(evt) {
-        evt.preventDefault()
-        navigate('/movies')
-        setLoggedIn(true)
-      }
+    function onSubmit(evt) {
+       evt.preventDefault()
+       onLogin(values.email, values.password)
+    }
 
     return (
         <main className="login__page">
@@ -38,37 +24,45 @@ export default function Login ({ setLoggedIn }) {
                 <h1 className="login__title">Рады видеть!</h1>
                 <form className="login__form" 
                 name="signin"
-                onSubmit={handleLogin}
+                onSubmit={onSubmit}
+                noValidate
                 >
                     <label className="login__label">
                         <span className="login__subtitle">Email</span>
                         <input 
-                        className="login__input_email"
-                        placeholder='Email@mail.com'
-                        type="email"
-                        value={email}
-                        onChange={({target}) => setEmail(target.value)}
-                        required
+                            name="email"
+                            className='login__input_email'
+                            placeholder='Email@mail.com'
+                            type="email"
+                            value={values.email || ''}
+                            onChange={handleChange}
+                            pattern={"^\\S+@\\S+\\.\\S+$"}
+                            required
                         >
                         </input>
-                        <span className="login__error"></span>
+                        <span className="login__error" error={errors.email}>{errors.email}</span>
                     </label>
 
                     <label className="login__label">
                         <span className="login__subtitle">Пароль</span>
                         <input 
-                        className="login__input_password" 
-                        placeholder='Пароль'
-                        type="password"
-                        value={password}
-                        onChange={({target}) => setPassword(target.value)}
-                        required
+                            name="password"
+                            className='login__input_password'
+                            placeholder='Пароль'
+                            type="password"
+                            minLength={6}
+                            value={values.password || ''}
+                            error={errors.password}
+                            onChange={handleChange}
+                            required
                         >  
                         </input>
-                        <span className="login__error">Что-то пошло не так</span>
+                        <span className="login__error" error={errors.password}>{errors.password}</span>
                     </label>
-                    <span className="login__error-request">Ошибка при входе</span>
-                    <button type="submit" className="login__submit">Войти</button>
+                    <span className={`login__error-request ${isError ? 'login__error-request_active' : ''}`}>Ошибка при авторизации</span>
+                    <button type="submit" 
+                    disabled={ !isValid || isSend }
+                    className={`login__submit ${isValid || isSend ? '' : 'login__submit_disabled'}`}>Войти</button>
                 </form>
                 <p className="login__text">Ещё не зарегистрированы? <Link to='/signup' className='login__link'>Регистрация</Link></p>
             </div>

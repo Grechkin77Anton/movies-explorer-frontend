@@ -6,6 +6,8 @@
     object-fit: cover;
     display: block;
     width: 100%;
+    cursor: pointer;
+    height: 151px;
 }
 
 .movie__card-group {

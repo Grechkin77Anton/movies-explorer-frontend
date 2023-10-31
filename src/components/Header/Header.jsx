@@ -4,7 +4,7 @@ import './Header.css';
 import { useState } from "react";
 
 export default function Header({ name, loggedIn }) {
-  console.log(loggedIn)
+  // console.log(loggedIn)
 
   const { pathname } = useLocation()
   const [isOpen, setIsOpen] = useState(false)

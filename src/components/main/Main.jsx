@@ -7,7 +7,6 @@ import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
 
 export default function Main() {
-
   return (
     <main className="content">
       <Promo />
