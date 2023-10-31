@@ -8,7 +8,7 @@
 
 ## Проект
 
-[Ссылка на проект](diplom.grechkin.nomoredomainsicu.ru)
+[Ссылка на проект](https://diplom.grechkin.nomoredomainsicu.ru)
 
 ## Pull request
 
