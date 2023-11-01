@@ -1,0 +1,112 @@
+.promo {
+    background-color: #073042;;
+    padding: 70px 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.promo__image {
+    background-image: url(../../images/landing-logo.svg);
+    background-size: cover;
+    height: calc(136px + 21.875vw);
+    margin-bottom: 44px;
+    width: calc(138.57143px + 22.32143vw);
+}
+
+.promo__container {
+    padding: 0 10px 0 10px;
+}
+
+.promo__title {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1.2px;
+    line-height: 38px;
+}
+
+.promo__subtitle {
+    text-align: center;
+    margin: 24px auto 80px;
+    width: 260px;
+    opacity: 50%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.promo__link {
+    border: 1px solid white;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    min-height: 36px;
+    padding-top: 10px;
+    text-align: center;
+    width: 129px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+.promo__link:hover {
+    opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+    .promo {
+        padding: 141px 0 80px;
+    }
+    .promo__title {
+        font-size: 40px;
+        width: 565px;
+        line-height: 50px;
+        letter-spacing: 0.2px;
+    }
+
+    .promo__subtitle {
+        margin: 24px auto 92px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .promo {
+        padding: 75px 70px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .promo__image {
+        width: 310px;
+        height: 304px;
+        margin: 0;
+    }
+
+    .promo__container {
+        padding: 0;
+    }
+
+    .promo__title {
+        font-size: 50px;
+        text-align: left;
+        width: 636px;
+        line-height: 58.73px;
+        letter-spacing: 0px;
+    }
+    .promo__subtitle {
+        margin: 36px auto 0 0;
+        text-align: left;
+        width: 300px;
+    }
+    .promo__link {
+        margin: 146px auto 0 0px;
+    }
+}
